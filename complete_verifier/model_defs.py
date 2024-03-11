@@ -544,6 +544,8 @@ def cifar_conv_small_sigmoid():
     )
     return model
 
+    
+
 def cifar_conv_big():
     model = nn.Sequential(
         nn.Conv2d(3, 32, 3, stride=1, padding=1),

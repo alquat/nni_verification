@@ -1,0 +1,27 @@
+; Check generation bounds violation:
+(declare-const X_0 Real)
+(declare-const X_1 Real)
+(declare-const X_2 Real)
+(declare-const X_3 Real)
+
+(declare-const Y_0 Real)
+(declare-const Y_1 Real)
+(declare-const Y_2 Real)
+(declare-const Y_3 Real)
+
+; Input constraints:
+(assert (<= X_0 2.0))
+(assert (>= X_0 0.0))
+
+(assert (<= X_1 2.0))
+(assert (>= X_1 0.0))
+
+(assert (<= X_2 2.0))
+(assert (>= X_2 0.0))
+
+(assert (<= X_3 2.0))
+(assert (>= X_3 0.0))
+
+; Output constraints:
+(assert (<= Y_0 0.5))
+(assert (>= Y_0 0.0))

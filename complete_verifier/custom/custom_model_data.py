@@ -41,6 +41,15 @@ def simple_conv_model(in_channel, out_dim):
     )
     return model
 
+def MimicNet(in_dim=4,out_dim=4):
+    model = nn.Sequential(
+        nn.Flatten(),
+        nn.Linear(in_dim, 10),
+        nn.ReLU(),
+        nn.Linear(10, out_dim)
+        )
+    return model
+
 
 def two_relu_toy_model(in_dim=2, out_dim=2):
     """A very simple model, 2 inputs, 2 ReLUs, 2 outputs"""
