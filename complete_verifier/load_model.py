@@ -148,7 +148,7 @@ def load_model_onnx(path, quirks=None, x=None):
         onnx_shape = onnx_shape[1:]
 
     pytorch_model = onnx2pytorch.ConvertModel(
-        onnx_model, experimental=True, quirks=quirks)
+        onnx_model, experimental=True)
     pytorch_model.eval()
     pytorch_model.to(dtype=torch.get_default_dtype())
 

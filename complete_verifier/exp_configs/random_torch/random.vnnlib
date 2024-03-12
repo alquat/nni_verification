@@ -23,5 +23,14 @@
 (assert (>= X_3 0.0))
 
 ; Output constraints:
-(assert (<= Y_0 0.5))
-(assert (>= Y_0 0.0))
+(assert (<= Y_0 2.0))
+(assert (>= Y_0 -2.0))
+
+(assert (<= Y_1 2.0))
+(assert (>= Y_1 -2.0))
+
+(assert (<= Y_2 2.0))
+(assert (>= Y_2 -2.0))
+
+(assert (<= Y_3 2.0))
+(assert (>= Y_3 -2.0))
