@@ -49,10 +49,12 @@ samples = generate_samples(num_samples,num_features, noise_level)
 # Normalize
 normalized_samples = normalize_data(samples)
 targets = np.sum(normalized_samples, axis=1)
-
+print(normalized_samples)
 # Convert to PyTorch tensor
 input_data = torch.tensor(normalized_samples, dtype=torch.float32)
 targets = torch.tensor(targets, dtype=torch.float32).unsqueeze(1) 
+
+print(targets)
 
 
 
@@ -80,11 +82,14 @@ for epoch in range(1000):
     if (epoch + 1) % 100 == 0:
         print(f'Epoch [{epoch+1}/1000], Loss: {total_loss/len(samples)}')
 
+
+
 # Test the trained model
 output_samples = {}
 for i, sample in enumerate(input_data):
     predicted_output = model(sample)
     print(f'Sample {i+1}: \nActual: {targets[i]} \nPredicted: {predicted_output}\n')
+    print("the difference", targets[i] - predicted_output)
     output_samples[f"Sample_{i+1}"] = predicted_output.tolist()
 
 # Export the trained model to ONNX format
@@ -92,7 +97,7 @@ dummy_input = torch.randn(1, num_features)  # Create a dummy input tensor
 onnx_filename = "mimic_model_true.onnx"
 torch.onnx.export(model, dummy_input, onnx_filename)
 print(f"Model exported to {onnx_filename}")
-
+print(model(dummy_input))
 # Assuming 'model' is your trained model
 # Save the trained model
 torch.save(model.state_dict(), 'mimic_model.pth')

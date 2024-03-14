@@ -6,13 +6,12 @@
 (declare-const Y_0 Real)
 
 ; the X_0 epsilon values
-(assert (<= X_0 2.1))
-(assert (>= X_0 1.9))
+(assert (<= X_0 0.92))
+(assert (>= X_0 0.91))
 
-; Unscaled Input 1: (-3.141592653589793, 3.141592653589793)
-(assert (<= X_1 5.1))
-(assert (>= X_1 4.9))
+(assert (<= X_1 1.751))
+(assert (>= X_1 1.74))
 
 ; Output property
-(assert (<= Y_0 9.0))
-(assert (>= Y_0 -9.0))
+(assert (>= Y_0 2.8))
+(assert (<= Y_0 2.5))
