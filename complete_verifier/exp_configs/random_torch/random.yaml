@@ -4,8 +4,7 @@ general:
   sparse_interm: false
   no_batchdim_buffers: True
 model:
-  onnx_optimization_flags: ["remove_matmul_inplace"]
-  onnx_path: exp_configs/random_torch/mimic_model_copy.onnx
+  onnx_path: exp_configs/random_torch/mimic_model_true.onnx
 specification:
-  vnnlib_path: exp_configs/random_torch/random.vnnlib
+  vnnlib_path: exp_configs/random_torch/mimic_model.vnnlib
 

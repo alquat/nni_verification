@@ -2,7 +2,7 @@ general:
   conv_mode: matrix
   sparse_alpha: false
   sparse_interm: false
-  root_path: ../../vnncomp2023_benchmarks/benchmarks/ml4acopf
+  root_path: vnncomp2023_benchmarks/benchmarks/ml4acopf
   csv_name: instances.csv
   no_batchdim_buffers: True
 model:
